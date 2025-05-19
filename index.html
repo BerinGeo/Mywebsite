@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>G. Berin Geo - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }body {
+  background: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  z-index: -1;
+}
+
+.dark-mode {
+  background: #0f0f1f;
+  color: #eee;
+}
+
+header {
+  padding: 3rem 2rem 1rem;
+  text-align: center;
+  animation: fadeInDown 1.2s ease-in-out;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.typing {
+  font-size: 1.2rem;
+  border-right: 2px solid;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 4s steps(40, end) forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+nav {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 999;
+}
+
+.hamburger {
+  cursor: pointer;
+  width: 30px;
+  height: 22px;
+  position: relative;
+}
+
+.hamburger span {
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: #fff;
+  border-radius: 5px;
+  transition: all 0.4s;
+}
+
+.hamburger span:nth-child(1) { top: 0; }
+.hamburger span:nth-child(2) { top: 9px; }
+.hamburger span:nth-child(3) { bottom: 0; }
+
+.menu {
+  position: fixed;
+  left: -100%;
+  top: 0;
+  width: 200px;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 2rem;
+  transition: left 0.5s ease;
+}
+
+.menu.active { left: 0; }
+.menu a {
+  display: block;
+  margin: 1rem 0;
+  color: #fff;
+  text-decoration: none;
+}
+
+.toggle-dark {
+  margin: 1rem auto;
+  display: block;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #00f0ff;
+  color: #000;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.toggle-dark:hover {
+  transform: scale(1.05);
+  background: #00c0cc;
+}
+
+section {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 15px #00f0ff;
+  animation: fadeInSlide 1s ease forwards;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li::before {
+  content: "• ";
+  color: #00f0ff;
+}
+
+a {
+  color: #00f0ff;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInSlide {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="menu" id="menu">
+      <a href="#about">About</a>
+      <a href="#github">GitHub</a>
+      <a href="#stack">Stack</a>
+      <a href="#socials">Socials</a>
+    </div>
+  </nav><button class="toggle-dark" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+  <header>
+    <h1>G. Berin Geo</h1>
+    <p class="typing">Aspiring Software Engineer | Highschool Student</p>
+  </header>  <section id="about">
+    <h2>About Me</h2>
+    <p>Hey! I'm <strong>G. Berin Geo</strong>, currently a highschool student with a passion for software engineering. I'm a self-taught programmer who has learned <strong>Python</strong>, <strong>HTML/CSS</strong>, <strong>SQL</strong>, and currently exploring <strong>JavaScript</strong>.</p>
+    <p>I enjoy programming more as a passion than just a profession. I’m also familiar with Linux systems and have some networking knowledge such as running scans using <strong>nmap</strong>.</p>
+    <p>One of my favorite projects was a Discord bot called <em>DreamBot</em>, which I built using Python. Although I don't have proof of it anymore, it was a proud moment for me.</p>
+  </section>  <section id="stack">
+    <h2>Tech Stack</h2>
+    <ul>
+      <li>Python</li>
+      <li>HTML & CSS</li>
+      <li>SQL</li>
+      <li>JavaScript (learning)</li>
+      <li>Linux (familiar)</li>
+      <li>nmap (basic usage)</li>
+    </ul>
+  </section>  <section id="github">
+    <h2>My GitHub</h2>
+    <p>Check out my work and progress on <a href="https://github.com/BerinGeo" target="_blank">GitHub @BerinGeo</a>.</p>
+  </section>  <section id="socials">
+    <h2>Socials</h2>
+    <p>Follow me on Instagram: <a href="https://instagram.com/beringeo" target="_blank">@beringeo</a></p>
+  </section>  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("active");
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const sections = document.querySelectorAll("section");
+      sections.forEach((section, i) => {
+        setTimeout(() => {
+          section.style.opacity = 1;
+          section.style.transform = "translateY(0)";
+        }, i * 300);
+      });
+    });
+  </script></body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
